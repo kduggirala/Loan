@@ -1,0 +1,31 @@
+Metrics used:
+  1. Loan age from Fannie Mae
+  2. Difference between current interest rate and loan interest rate from Fannie Mae
+  3. Original Loan to Value from Fannie Mae
+  4. Monthly Unemployment Rate (by metropolitan statistical area) from BLS
+  5. Monthly Housing Price (by first three numbers of the zip code) from zillow
+  6. Annual Personal Income (by first three numbers of the zip code) from BEA
+  7. Annual Population (by first three numbers of the zip code) from BEA
+
+Data normalized (subtracting mean, dividing out standard deviation with numpy)
+1,280,000 records used to train the network (~500k loans):
+  Each record starts at a month and moves five time steps lookforward
+    Each time step records every other month
+  Predicts prepayment exactly one year from start month
+
+Model Used (model6):
+  Keras Sequential model:
+    Two LSTM Layers (Neuron count: 32)
+    One Output Dense Layer with sigmoid activation (Neuron count: 1)
+  Batch size = 128
+  Dropout = 0.2
+  Recurrent dropout = 0.2
+  Steps per epoch = 10000
+
+Trained with: AWS EC2 g4dn.2xlarge
+
+models:
+  model 5: batch_size = 128, dropout = 0.2 --> ~96-97% acc
+  model 7: batch_size = 256, dropout = 0.2 --> ~94-95% acc (~97% on 2003, overfitted to 2003 data?)
+  model 8: batch_size = 512, dropout = 0.2 --> ~97.1 acc (during training ranged btwn 91-99% acc; seems to be wild dissonance between pre and post 2008, jumping point for further research?)
+  model 2009: batch_size = 512, dropout = 0.2 --> 97.5% acc (post-2008 data to train, not fully consistent, maybe hypothesis inccorect?)

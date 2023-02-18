@@ -1,0 +1,348 @@
+started rolling models:
+  2000:
+    model v1:
+      features:
+        qtrs_train = ['20{}Q{}'.format(str(i).zfill(2), j) for i in range(1) for j in range(1,5)]
+        qtrs_test = ['2001Q1']
+        epochs = 10
+        batch_size = 128
+        steps = 1
+        lookforward = 6
+        epoch_steps = 10000
+        val_steps = 2000
+        testing_steps = 5000
+        dropout = 0.4
+        partition = 5
+      optimizer settings:
+        learning_rate=0.001,
+        rho=0.9,
+        momentum=0.0,
+        epsilon=1e-07,
+        centered=False,
+        name="RMSprop",
+      model:
+        2 LSTM layers
+        32 neurons each
+      notes:
+        training and val accuracy stuck at around 60-65%, more epochs doesnt change
+      training results:
+        Train for 10000 steps, validate for 2000 steps
+        Epoch 1/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6030Completed 256.0 KiB/206.6 MiB (1007.2 KiB/s) with 1 file(s) remaininggg
+        10000/10000 [==============================] - 1142s 114ms/step - loss: 0.6591 - acc: 0.6030 - val_loss: 0.6537 - val_acc: 0.6144
+        Epoch 2/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6210Completed 256.0 KiB/197.0 MiB (1.3 MiB/s) with 1 file(s) remainingingng
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1303s 130ms/step - loss: 0.6477 - acc: 0.6210 - val_loss: 0.6461 - val_acc: 0.6235
+        Epoch 3/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6232Completed 256.0 KiB/197.0 MiB (996.2 KiB/s) with 1 file(s) remaininggng
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        10000/10000 [==============================] - 1252s 125ms/step - loss: 0.6461 - acc: 0.6232 - val_loss: 0.6487 - val_acc: 0.6222
+        Epoch 4/10
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz 0.6243Completed 256.0 KiB/233.4 MiB (1.1 MiB/s) with 1 file(s) remainingngng
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz
+        10000/10000 [==============================] - 1255s 125ms/step - loss: 0.6452 - acc: 0.6243 - val_loss: 0.6471 - val_acc: 0.6266
+        Epoch 5/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6255Completed 256.0 KiB/206.6 MiB (1010.8 KiB/s) with 1 file(s) remaininggg
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1226s 123ms/step - loss: 0.6445 - acc: 0.6255 - val_loss: 0.6687 - val_acc: 0.5935
+        Epoch 6/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6247Completed 256.0 KiB/187.1 MiB (980.7 KiB/s) with 1 file(s) remainingng
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1254s 125ms/step - loss: 0.6446 - acc: 0.6247 - val_loss: 0.6677 - val_acc: 0.5929
+        Epoch 7/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6258Completed 256.0 KiB/197.0 MiB (899.5 KiB/s) with 1 file(s) remainingngg
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1326s 133ms/step - loss: 0.6438 - acc: 0.6258 - val_loss: 0.6678 - val_acc: 0.5957
+        Epoch 8/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6262Completed 256.0 KiB/197.0 MiB (939.5 KiB/s) with 1 file(s) remainingngg
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        10000/10000 [==============================] - 1261s 126ms/step - loss: 0.6438 - acc: 0.6262 - val_loss: 0.6656 - val_acc: 0.5950
+        Epoch 9/10
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz 0.6259Completed 256.0 KiB/233.4 MiB (1.0 MiB/s) with 1 file(s) remainingningg
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz
+        10000/10000 [==============================] - 1258s 126ms/step - loss: 0.6439 - acc: 0.6259 - val_loss: 0.6660 - val_acc: 0.5976
+        Epoch 10/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6267Completed 256.0 KiB/206.6 MiB (1.1 MiB/s) with 1 file(s) remainingning
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1637s 164ms/step - loss: 0.6433 - acc: 0.6267 - val_loss: 0.6662 - val_acc: 0.5965
+        download: s3://loan-performance-data/numpy3/2001Q1.npy.gz to ./2001Q1.npy.gz
+        WARNING:tensorflow:sample_weight modes were coerced from
+        ...
+          to
+        ['...']
+        5000/5000 [==============================] - 511s 102ms/step - loss: 0.6548 - acc: 0.6182d 256.0 KiB/351.0 MiB (1.0 MiB/s) with 1 file(s) remaining
+    model v2:
+      features:
+        qtrs_train = ['20{}Q{}'.format(str(i).zfill(2), j) for i in range(1) for j in range(1,5)]
+        qtrs_test = ['2001Q1']
+        epochs = 10
+        batch_size = 128
+        steps = 2
+        lookforward = 12
+        epoch_steps = 10000
+        val_steps = 2000
+        testing_steps = 5000
+        dropout = 0.2
+        partition = 5
+      model:
+        2 LSTM layers
+        32 neurons each
+      optimizer settings:
+        learning_rate=0.001,
+        rho=0.9,
+        momentum=0.0,
+        epsilon=1e-07,
+        centered=False,
+        name="RMSprop",
+      training results:
+        Train for 10000 steps, validate for 2000 steps
+        Epoch 1/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6105Completed 256.0 KiB/206.6 MiB (1.1 MiB/s) with 1 file(s) remainingging
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1208s 121ms/step - loss: 0.6542 - acc: 0.6105 - val_loss: 0.6479 - val_acc: 0.6199
+        Epoch 2/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6183Completed 256.0 KiB/187.1 MiB (1.1 MiB/s) with 1 file(s) remainingning
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1294s 129ms/step - loss: 0.6495 - acc: 0.6183 - val_loss: 0.6505 - val_acc: 0.6162
+        Epoch 3/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6199Completed 256.0 KiB/187.1 MiB (1.0 MiB/s) with 1 file(s) remainingngng
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1247s 125ms/step - loss: 0.6483 - acc: 0.6199 - val_loss: 0.6507 - val_acc: 0.6157
+        Epoch 4/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6225Completed 256.0 KiB/187.1 MiB (1.0 MiB/s) with 1 file(s) remainingning
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1300s 130ms/step - loss: 0.6470 - acc: 0.6225 - val_loss: 0.6521 - val_acc: 0.6145
+        Epoch 5/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6233Completed 256.0 KiB/187.1 MiB (990.3 KiB/s) with 1 file(s) remainingng
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1299s 130ms/step - loss: 0.6466 - acc: 0.6233 - val_loss: 0.6491 - val_acc: 0.6186
+        Epoch 6/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6235Completed 256.0 KiB/187.1 MiB (1.0 MiB/s) with 1 file(s) remainingnging
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1250s 125ms/step - loss: 0.6465 - acc: 0.6235 - val_loss: 0.6503 - val_acc: 0.6177
+        Epoch 7/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6225Completed 256.0 KiB/187.1 MiB (1.1 MiB/s) with 1 file(s) remainingining
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1258s 126ms/step - loss: 0.6470 - acc: 0.6225 - val_loss: 0.6470 - val_acc: 0.6214
+        Epoch 8/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6224Completed 256.0 KiB/197.0 MiB (953.8 KiB/s) with 1 file(s) remainingngg
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1291s 129ms/step - loss: 0.6467 - acc: 0.6224 - val_loss: 0.6499 - val_acc: 0.6186
+        Epoch 9/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6234Completed 256.0 KiB/197.0 MiB (954.1 KiB/s) with 1 file(s) remainingng
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1301s 130ms/step - loss: 0.6462 - acc: 0.6234 - val_loss: 0.6493 - val_acc: 0.6170
+        Epoch 10/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6242Completed 256.0 KiB/197.0 MiB (964.8 KiB/s) with 1 file(s) remaininging
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1268s 127ms/step - loss: 0.6458 - acc: 0.6242 - val_loss: 0.6497 - val_acc: 0.6169
+        download: s3://loan-performance-data/numpy3/2001Q1.npy.gz to ./2001Q1.npy.gz
+        WARNING:tensorflow:sample_weight modes were coerced from
+        ...
+          to
+        ['...']
+        5000/5000 [==============================] - 493s 99ms/step - loss: 0.6381 - acc: 0.6446eted 256.0 KiB/351.0 MiB (1.2 MiB/s) with 1 file(s) remaining
+    model v3:
+      features:
+        qtrs_train = ['20{}Q{}'.format(str(i).zfill(2), j) for i in range(1) for j in range(1,5)]
+        qtrs_test = ['2001Q1']
+        epochs = 10
+        batch_size = 128
+        steps = 1
+        lookforward = 6
+        epoch_steps = 10000
+        val_steps = 2000
+        testing_steps = 5000
+        dropout = 0.2
+        partition = 5
+      model:
+        1 LSTM layers
+        32 neurons each
+      optimizer settings:
+        learning_rate=0.001,
+        rho=0.9,
+        momentum=0.0,
+        epsilon=1e-07,
+        centered=False,
+        name="RMSprop",
+      training results:
+        Train for 10000 steps, validate for 2000 steps
+        Epoch 1/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6168Completed 256.0 KiB/206.6 MiB (1.1 MiB/s) with 1 file(s) remainingingg
+        10000/10000 [==============================] - 1112s 111ms/step - loss: 0.6507 - acc: 0.6168 - val_loss: 0.6582 - val_acc: 0.6109
+        Epoch 2/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6277Completed 256.0 KiB/197.0 MiB (1.2 MiB/s) with 1 file(s) remainingningg
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1276s 128ms/step - loss: 0.6418 - acc: 0.6277 - val_loss: 0.6435 - val_acc: 0.6258
+        Epoch 3/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6301Completed 256.0 KiB/197.0 MiB (1.2 MiB/s) with 1 file(s) remaininging
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        10000/10000 [==============================] - 1236s 124ms/step - loss: 0.6399 - acc: 0.6301 - val_loss: 0.6404 - val_acc: 0.6292
+        Epoch 4/10
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz 0.6305Completed 256.0 KiB/233.4 MiB (1.2 MiB/s) with 1 file(s) remainingngng
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz
+        10000/10000 [==============================] - 1232s 123ms/step - loss: 0.6395 - acc: 0.6305 - val_loss: 0.6402 - val_acc: 0.6308
+        Epoch 5/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6323Completed 256.0 KiB/206.6 MiB (1.0 MiB/s) with 1 file(s) remainingning
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1202s 120ms/step - loss: 0.6380 - acc: 0.6323 - val_loss: 0.6573 - val_acc: 0.6071
+        Epoch 6/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6319Completed 256.0 KiB/187.1 MiB (997.3 KiB/s) with 1 file(s) remaininging
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1233s 123ms/step - loss: 0.6381 - acc: 0.6319 - val_loss: 0.6573 - val_acc: 0.6104
+        Epoch 7/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6325Completed 256.0 KiB/197.0 MiB (955.6 KiB/s) with 1 file(s) remainingngg
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1304s 130ms/step - loss: 0.6380 - acc: 0.6325 - val_loss: 0.6531 - val_acc: 0.6162
+        Epoch 8/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6325Completed 256.0 KiB/197.0 MiB (966.1 KiB/s) with 1 file(s) remainingngng
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        10000/10000 [==============================] - 1245s 124ms/step - loss: 0.6380 - acc: 0.6324 - val_loss: 0.6520 - val_acc: 0.6145
+        Epoch 9/10
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz 0.6330Completed 256.0 KiB/233.4 MiB (1.0 MiB/s) with 1 file(s) remainingning
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz
+        10000/10000 [==============================] - 1234s 123ms/step - loss: 0.6374 - acc: 0.6330 - val_loss: 0.6526 - val_acc: 0.6154
+        Epoch 10/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6337Completed 256.0 KiB/206.6 MiB (1.1 MiB/s) with 1 file(s) remainingnging
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1237s 124ms/step - loss: 0.6370 - acc: 0.6337 - val_loss: 0.6509 - val_acc: 0.6170
+        download: s3://loan-performance-data/numpy3/2001Q1.npy.gz to ./2001Q1.npy.gz
+        WARNING:tensorflow:sample_weight modes were coerced from
+          ...
+            to
+        5000/5000 [==============================] - 504s 101ms/step - loss: 0.6386 - acc: 0.6438d 256.0 KiB/351.0 MiB (1.1 MiB/s) with 1 file(s) remaining
+    model v4:
+      features:
+          qtrs_train = ['20{}Q{}'.format(str(i).zfill(2), j) for i in range(1) for j in range(1,5)]
+          qtrs_test = ['2001Q1']
+          epochs = 10
+          batch_size = 128
+          steps = 1
+          lookforward = 6
+          epoch_steps = 10000
+          val_steps = 2000
+          testing_steps = 5000
+          dropout = 0.2
+          partition = 5
+      model:
+        2 LSTM layers
+        64 neurons each
+      optimizer settings:
+        learning_rate=0.001,
+        rho=0.9,
+        momentum=0.0,
+        epsilon=1e-07,
+        centered=False,
+        name="RMSprop",
+      training results:
+        Train for 10000 steps, validate for 2000 steps
+          Epoch 1/10
+          download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6163Completed 256.0 KiB/206.6 MiB (1.1 MiB/s) with 1 file(s) remainingingg
+          10000/10000 [==============================] - 1113s 111ms/step - loss: 0.6505 - acc: 0.6163 - val_loss: 0.6549 - val_acc: 0.6124
+          Epoch 2/10
+          download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6285Completed 256.0 KiB/197.0 MiB (1.2 MiB/s) with 1 file(s) remaininggingng
+          download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+          download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+          10000/10000 [==============================] - 1271s 127ms/step - loss: 0.6411 - acc: 0.6285 - val_loss: 0.6447 - val_acc: 0.6235
+          Epoch 3/10
+          download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6313Completed 256.0 KiB/197.0 MiB (1.1 MiB/s) with 1 file(s) remaininging
+          download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+          10000/10000 [==============================] - 1232s 123ms/step - loss: 0.6392 - acc: 0.6313 - val_loss: 0.6387 - val_acc: 0.6311
+          Epoch 4/10
+          download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz 0.6319Completed 256.0 KiB/233.4 MiB (1.0 MiB/s) with 1 file(s) remainingingg
+          download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz
+          10000/10000 [==============================] - 1230s 123ms/step - loss: 0.6387 - acc: 0.6319 - val_loss: 0.6397 - val_acc: 0.6309
+          Epoch 5/10
+          download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6326Completed 256.0 KiB/206.6 MiB (1.1 MiB/s) with 1 file(s) remainingningng
+          download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+          10000/10000 [==============================] - 1201s 120ms/step - loss: 0.6379 - acc: 0.6326 - val_loss: 0.6532 - val_acc: 0.6159
+          Epoch 6/10
+          download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6320Completed 256.0 KiB/187.1 MiB (1005.9 KiB/s) with 1 file(s) remainingng
+          download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+          10000/10000 [==============================] - 1230s 123ms/step - loss: 0.6381 - acc: 0.6320 - val_loss: 0.6529 - val_acc: 0.6157
+          Epoch 7/10
+          download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6340Completed 256.0 KiB/197.0 MiB (972.9 KiB/s) with 1 file(s) remaininging
+          download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+          download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+          10000/10000 [==============================] - 1301s 130ms/step - loss: 0.6372 - acc: 0.6340 - val_loss: 0.6514 - val_acc: 0.6182
+          Epoch 8/10
+          download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6347Completed 256.0 KiB/197.0 MiB (991.5 KiB/s) with 1 file(s) remainingg
+          download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+          10000/10000 [==============================] - 1238s 124ms/step - loss: 0.6365 - acc: 0.6347 - val_loss: 0.6534 - val_acc: 0.6175
+          Epoch 9/10
+          download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz 0.6355Completed 256.0 KiB/233.4 MiB (1.0 MiB/s) with 1 file(s) remainingning
+          download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz
+          10000/10000 [==============================] - 1233s 123ms/step - loss: 0.6363 - acc: 0.6355 - val_loss: 0.6480 - val_acc: 0.6210
+          Epoch 10/10
+          download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6350Completed 256.0 KiB/206.6 MiB (1.0 MiB/s) with 1 file(s) remainingning
+          download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+          10000/10000 [==============================] - 1235s 124ms/step - loss: 0.6362 - acc: 0.6350 - val_loss: 0.6472 - val_acc: 0.6224
+          download: s3://loan-performance-data/numpy3/2001Q1.npy.gz to ./2001Q1.npy.gz
+          WARNING:tensorflow:sample_weight modes were coerced from
+            ...
+              to
+            ['...']
+          5000/5000 [==============================] - 503s 101ms/step - loss: 0.6393 - acc: 0.6422d 256.0 KiB/351.0 MiB (1.0 MiB/s) with 1 file(s) remaining
+    model v5:
+      training_results:
+        Train for 10000 steps, validate for 2000 steps
+        Epoch 1/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6105Completed 256.0 KiB/206.6 MiB (1.0 MiB/s) with 1 file(s) remaininginggg
+        10000/10000 [==============================] - 1147s 115ms/step - loss: 0.6547 - acc: 0.6105 - val_loss: 0.6560 - val_acc: 0.6135
+        Epoch 2/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6264Completed 256.0 KiB/197.0 MiB (1.3 MiB/s) with 1 file(s) remaininginggg
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1302s 130ms/step - loss: 0.6435 - acc: 0.6264 - val_loss: 0.6428 - val_acc: 0.6266
+        Epoch 3/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6282Completed 256.0 KiB/197.0 MiB (1.1 MiB/s) with 1 file(s) remainingingg
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        10000/10000 [==============================] - 1256s 126ms/step - loss: 0.6419 - acc: 0.6282 - val_loss: 0.6406 - val_acc: 0.6299
+        Epoch 4/10
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz 0.6292Completed 256.0 KiB/233.4 MiB (1.1 MiB/s) with 1 file(s) remainingngng
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz
+        10000/10000 [==============================] - 1256s 126ms/step - loss: 0.6413 - acc: 0.6292 - val_loss: 0.6423 - val_acc: 0.6306
+        Epoch 5/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6301Completed 256.0 KiB/206.6 MiB (1.0 MiB/s) with 1 file(s) remainingning
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1222s 122ms/step - loss: 0.6407 - acc: 0.6301 - val_loss: 0.6535 - val_acc: 0.6131
+        Epoch 6/10
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz 0.6292Completed 256.0 KiB/187.1 MiB (1016.2 KiB/s) with 1 file(s) remaininggg
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1247s 125ms/step - loss: 0.6406 - acc: 0.6292 - val_loss: 0.6575 - val_acc: 0.6086
+        Epoch 7/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6309Completed 256.0 KiB/197.0 MiB (922.6 KiB/s) with 1 file(s) remainingnggg
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz
+        10000/10000 [==============================] - 1317s 132ms/step - loss: 0.6399 - acc: 0.6309 - val_loss: 0.6558 - val_acc: 0.6098
+        Epoch 8/10
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz 0.6309Completed 256.0 KiB/197.0 MiB (870.9 KiB/s) with 1 file(s) remainingng
+        download: s3://loan-performance-data/numpy3/2000Q2.npy.gz to ./2000Q2.npy.gz
+        10000/10000 [==============================] - 1251s 125ms/step - loss: 0.6396 - acc: 0.6309 - val_loss: 0.6509 - val_acc: 0.6156
+        Epoch 9/10
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz 0.6318Completed 256.0 KiB/233.4 MiB (1.2 MiB/s) with 1 file(s) remainingningg
+        download: s3://loan-performance-data/numpy3/2000Q1.npy.gz to ./2000Q1.npy.gz
+        10000/10000 [==============================] - 1252s 125ms/step - loss: 0.6392 - acc: 0.6318 - val_loss: 0.6509 - val_acc: 0.6184
+        Epoch 10/10
+        download: s3://loan-performance-data/numpy3/2000Q3.npy.gz to ./2000Q3.npy.gz 0.6319Completed 256.0 KiB/206.6 MiB (1.1 MiB/s) with 1 file(s) remainingining
+        download: s3://loan-performance-data/numpy3/2000Q4.npy.gz to ./2000Q4.npy.gz
+        10000/10000 [==============================] - 1249s 125ms/step - loss: 0.6389 - acc: 0.6319 - val_loss: 0.6519 - val_acc: 0.6159
+        download: s3://loan-performance-data/numpy3/2001Q1.npy.gz to ./2001Q1.npy.gz
+        WARNING:tensorflow:sample_weight modes were coerced from
+          ...
+            to
+          ['...']
+        5000/5000 [==============================] - 510s 102ms/step - loss: 0.6412 - acc: 0.6405d 256.0 KiB/351.0 MiB (1.1 MiB/s) with 1 file(s) remaining

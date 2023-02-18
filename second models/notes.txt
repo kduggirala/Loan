@@ -1,0 +1,487 @@
+788152
+
+model 2:
+2007Q4
+2007Q1
+2012Q4
+2006Q4
+2011Q1
+2011Q2
+2009Q4
+2008Q4
+2010Q4
+2015Q3
+2014Q3
+2015Q2
+2005Q3
+
+testing acc 88.39%
+validation acc varied wildly: on >2009 it was solid 90+%, otherwise reached as low as 50%
+
+model 1: this time reintroduce bounding to see more variety
+
+
+2013Q3
+2014Q4
+2005Q3
+2007Q3
+2008Q1
+2010Q2
+2016Q3
+2006Q1
+2015Q1
+2015Q2
+2006Q2
+2008Q2
+2016Q4
+2013Q2
+2005Q2
+2013Q4
+2007Q1
+2004Q2
+2015Q4
+2009Q1
+2006Q4
+2004Q4
+2014Q1
+2007Q4
+2016Q1
+2005Q1
+
+test_acc: 92.53%
+train_acc: ~95-96 %
+val_acc: widely varies still, maybe need to see more data
+
+model 3: step_size up to 7500
+
+2008Q3
+2011Q4
+2007Q3
+2010Q2
+2014Q3
+2016Q1
+2013Q4
+2004Q3
+2009Q1
+2007Q4
+2005Q2
+2009Q4
+2015Q4
+2006Q4
+2016Q2
+2006Q3
+2014Q1
+2015Q2
+2013Q1
+2008Q2
+2005Q1
+2011Q1
+2005Q3
+2016Q3
+2010Q1
+2011Q2
+2015Q1
+2008Q1
+2012Q4
+2010Q4
+2004Q2
+
+testing_acc: 83.71%
+training_acc: ~92-95%
+val_acc: less sporadic (80-96%) - more data worked(?)
+
+model 4: one lstm layer instead of 2
+
+2004Q2
+2014Q3
+2005Q1
+2016Q3
+2009Q1
+2010Q4
+2015Q3
+2010Q3
+2012Q3
+2013Q2
+2006Q4
+2005Q4
+2015Q1
+2015Q2
+2005Q2
+2014Q1
+2016Q2
+2012Q2
+2004Q4
+2012Q4
+2006Q1
+2011Q2
+2013Q4
+2009Q4
+2007Q4
+2010Q1
+2012Q1
+2009Q2
+2004Q1
+2006Q2
+2008Q1
+
+testing_acc = 89.19%
+train_acc = 91.69, 93.52, 91.87, 94.78, 94.14, 93.49, 94.59, 95.08, 91.97, 92.89 --> 93.40%
+val_acc = much less variation, 88-92%
+
+model 5:
+2013Q2
+2012Q4
+2009Q4
+2011Q1
+2004Q3
+2006Q2
+2016Q2
+2008Q3
+2005Q1
+2014Q1
+2010Q1
+2012Q3
+2005Q3
+2010Q4
+2007Q3
+2007Q1
+2006Q3
+2010Q2
+2014Q3
+2008Q4
+2016Q4
+2007Q4
+2004Q1
+2015Q2
+2015Q4
+2013Q1
+2005Q4
+2011Q2
+2009Q1
+2005Q2
+2013Q3
+2011Q3
+
+testing_acc = 90.75%
+training_acc =
+Train for 7500 steps, validate for 1000 steps
+Epoch 1/10
+7500/7500 [==============================] - 976s 130ms/step - loss: 0.1333 - acc: 0.9522 - val_loss: 0.1218 - val_acc: 0.9552 with 1 file(s) remaining
+Epoch 2/10
+7500/7500 [==============================] - 1123s 150ms/step - loss: 0.2185 - acc: 0.9194 - val_loss: 0.4579 - val_acc: 0.7900with 1 file(s) remainingg
+Epoch 3/10
+7500/7500 [==============================] - 762s 102ms/step - loss: 0.1994 - acc: 0.9307 - val_loss: 0.3767 - val_acc: 0.8733 with 1 file(s) remainingg
+Epoch 4/10
+7500/7500 [==============================] - 1091s 146ms/step - loss: 0.1977 - acc: 0.9276 - val_loss: 0.1644 - val_acc: 0.9446with 1 file(s) remainingg
+Epoch 5/10
+7500/7500 [==============================] - 1219s 162ms/step - loss: 0.1717 - acc: 0.9403 - val_loss: 0.3816 - val_acc: 0.8666with 1 file(s) remaining
+Epoch 6/10
+7500/7500 [==============================] - 1088s 145ms/step - loss: 0.1919 - acc: 0.9274 - val_loss: 0.2967 - val_acc: 0.9251ith 1 file(s) remaininggg
+Epoch 7/10
+7500/7500 [==============================] - 556s 74ms/step - loss: 0.2141 - acc: 0.9197 - val_loss: 0.0840 - val_acc: 0.9815) with 1 file(s) remainingg
+Epoch 8/10
+7500/7500 [==============================] - 951s 127ms/step - loss: 0.1874 - acc: 0.9290 - val_loss: 1.8920 - val_acc: 0.4810ith 1 file(s) remainingng
+Epoch 9/10
+7500/7500 [==============================] - 722s 96ms/step - loss: 0.1548 - acc: 0.9429 - val_loss: 0.1420 - val_acc: 0.9492) with 1 file(s) remaining
+Epoch 10/10
+7500/7500 [==============================] - 1123s 150ms/step - loss: 0.1893 - acc: 0.9281 - val_loss: 0.3881 - val_acc: 0.9029with 1 file(s) remainingg
+
+model 6: dropout to 0.1, reccurent dropout to 0.5
+2016Q2
+2012Q1
+2014Q3
+2016Q3
+2016Q4
+2009Q1
+2007Q1
+2009Q4
+2010Q3
+2012Q2
+2013Q3
+2016Q1
+2007Q3
+2012Q4
+2004Q2
+2009Q2
+2006Q1
+2015Q1
+2011Q2
+2010Q1
+2013Q1
+2008Q2
+2012Q3
+2005Q3
+2005Q1
+2015Q2
+2014Q2
+2006Q4
+2014Q4
+2011Q3
+2004Q4
+
+Epoch 1/10
+7500/7500 [==============================] - 639s 85ms/step - loss: 0.2164 - acc: 0.9258 - val_loss: 0.3125 - val_acc: 0.9039with 1 file(s) remainingng
+Epoch 2/10
+7500/7500 [==============================] - 256s 34ms/step - loss: 0.1704 - acc: 0.9455 - val_loss: 0.0812 - val_acc: 0.9807) with 1 file(s) remaining
+Epoch 3/10
+7500/7500 [==============================] - 851s 113ms/step - loss: 0.1766 - acc: 0.9368 - val_loss: 0.2503 - val_acc: 0.9129with 1 file(s) remainingg
+Epoch 4/10
+7500/7500 [==============================] - 995s 133ms/step - loss: 0.2018 - acc: 0.9242 - val_loss: 0.2204 - val_acc: 0.9300ith 1 file(s) remainingngg
+Epoch 5/10
+7500/7500 [==============================] - 755s 101ms/step - loss: 0.1812 - acc: 0.9335 - val_loss: 0.1121 - val_acc: 0.9581 with 1 file(s) remaining
+Epoch 6/10
+7500/7500 [==============================] - 1297s 173ms/step - loss: 0.1610 - acc: 0.9419 - val_loss: 0.1698 - val_acc: 0.9341ith 1 file(s) remainingg
+Epoch 7/10
+7500/7500 [==============================] - 897s 120ms/step - loss: 0.1637 - acc: 0.9366 - val_loss: 0.1622 - val_acc: 0.9314 with 1 file(s) remaining
+Epoch 8/10
+7500/7500 [==============================] - 970s 129ms/step - loss: 0.1713 - acc: 0.9364 - val_loss: 0.1094 - val_acc: 0.9638 with 1 file(s) remaining
+Epoch 9/10
+7500/7500 [==============================] - 1061s 141ms/step - loss: 0.1754 - acc: 0.9394 - val_loss: 0.1914 - val_acc: 0.9361th 1 file(s) remainingngg
+Epoch 10/10
+7500/7500 [==============================] - 900s 120ms/step - loss: 0.1778 - acc: 0.9341 - val_loss: 0.2060 - val_acc: 0.9241 with 1 file(s) remainingg
+
+2000/2000 [==============================] - 247s 123ms/step - loss: 0.3582 - acc: 0.8785ed 256.0 KiB/424.4 MiB (993.8 KiB/s) with 1 file(s) remainingg
+
+model 7:
+Train for 7500 steps, validate for 1000 steps
+Epoch 1/10
+7500/7500 [==============================] - 923s 123ms/step - loss: 0.1635 - acc: 0.9369 - val_loss: 0.3074 - val_acc: 0.8875with 1 file(s) remainingg
+Epoch 2/10
+7500/7500 [==============================] - 567s 76ms/step - loss: 0.1742 - acc: 0.9362 - val_loss: 0.1293 - val_acc: 0.9610) with 1 file(s) remainingg
+Epoch 3/10
+7500/7500 [==============================] - 1107s 148ms/step - loss: 0.2207 - acc: 0.9156 - val_loss: 0.3223 - val_acc: 0.8954with 1 file(s) remaining
+Epoch 4/10
+7500/7500 [==============================] - 991s 132ms/step - loss: 0.1914 - acc: 0.9242 - val_loss: 0.5612 - val_acc: 0.6191with 1 file(s) remaininggg
+Epoch 5/10
+7500/7500 [==============================] - 1008s 134ms/step - loss: 0.1862 - acc: 0.9300 - val_loss: 0.3030 - val_acc: 0.8828th 1 file(s) remainingngg
+Epoch 6/10
+7500/7500 [==============================] - 740s 99ms/step - loss: 0.2220 - acc: 0.9147 - val_loss: 0.3907 - val_acc: 0.8901 with 1 file(s) remainingng
+Epoch 7/10
+7500/7500 [==============================] - 1141s 152ms/step - loss: 0.1878 - acc: 0.9345 - val_loss: 0.2380 - val_acc: 0.9386with 1 file(s) remainingg
+Epoch 8/10
+7500/7500 [==============================] - 917s 122ms/step - loss: 0.1675 - acc: 0.9400 - val_loss: 0.3352 - val_acc: 0.9064ith 1 file(s) remainingngg
+Epoch 9/10
+7500/7500 [==============================] - 727s 97ms/step - loss: 0.1802 - acc: 0.9276 - val_loss: 0.8814 - val_acc: 0.6318with 1 file(s) remainingngg
+Epoch 10/10
+7500/7500 [==============================] - 1081s 144ms/step - loss: 0.1990 - acc: 0.9299 - val_loss: 0.1885 - val_acc: 0.9250ith 1 file(s) remainingg
+
+2000/2000 [==============================] - 124s 62ms/step - loss: 0.2051 - acc: 0.9180ed 256.0 KiB/205.9 MiB (895.9 KiB/s) with 1 file(s) remaining
+2012Q4
+2010Q2
+2011Q3
+2013Q3
+2016Q2
+2010Q4
+2005Q2
+2007Q4
+2010Q1
+2006Q3
+2014Q2
+2004Q1
+2007Q2
+2006Q4
+2014Q3
+2007Q3
+2015Q4
+2010Q3
+2008Q1
+2005Q1
+2006Q2
+2012Q1
+2008Q4
+2012Q3
+2008Q2
+2015Q2
+2009Q1
+2015Q3
+2005Q3
+2004Q3
+2015Q1
+2008Q3
+
+model8 :
+Train for 7500 steps, validate for 1000 steps
+Epoch 1/10
+7500/7500 [==============================] - 1365s 182ms/step - loss: 0.2395 - acc: 0.9102 - val_loss: 1.1704 - val_acc: 0.7959th 1 file(s) remainingng
+Epoch 2/10
+7500/7500 [==============================] - 564s 75ms/step - loss: 0.2220 - acc: 0.9172 - val_loss: 0.2171 - val_acc: 0.9298) with 1 file(s) remaining
+Epoch 3/10
+7500/7500 [==============================] - 1061s 141ms/step - loss: 0.1959 - acc: 0.9272 - val_loss: 0.7683 - val_acc: 0.6850th 1 file(s) remainingngg
+Epoch 4/10
+7500/7500 [==============================] - 515s 69ms/step - loss: 0.1975 - acc: 0.9281 - val_loss: 0.2380 - val_acc: 0.9161 with 1 file(s) remainingg
+Epoch 5/10
+7500/7500 [==============================] - 885s 118ms/step - loss: 0.2128 - acc: 0.9210 - val_loss: 1.0296 - val_acc: 0.5971ith 1 file(s) remainingng
+Epoch 6/10
+7500/7500 [==============================] - 839s 112ms/step - loss: 0.2082 - acc: 0.9172 - val_loss: 0.3370 - val_acc: 0.9035with 1 file(s) remainingg
+Epoch 7/10
+7500/7500 [==============================] - 944s 126ms/step - loss: 0.2010 - acc: 0.9221 - val_loss: 0.1690 - val_acc: 0.9393 with 1 file(s) remainingg
+Epoch 8/10
+7500/7500 [==============================] - 611s 81ms/step - loss: 0.1625 - acc: 0.9351 - val_loss: 0.1345 - val_acc: 0.9544with 1 file(s) remainingng
+Epoch 9/10
+7500/7500 [==============================] - 1176s 157ms/step - loss: 0.1764 - acc: 0.9380 - val_loss: 0.4932 - val_acc: 0.7916th 1 file(s) remainingng
+Epoch 10/10
+7500/7500 [==============================] - 1048s 140ms/step - loss: 0.2034 - acc: 0.9207 - val_loss: 0.3990 - val_acc: 0.9075with 1 file(s) remainingg
+
+2000/2000 [==============================] - 268s 134ms/step - loss: 0.3904 - acc: 0.9154ted 256.0 KiB/682.6 MiB (852.9 KiB/s) with 1 file(s) remaining
+2011Q2
+2004Q2
+2005Q4
+2016Q4
+2015Q1
+2012Q1
+2013Q4
+2006Q1
+2004Q4
+2014Q2
+2008Q3
+2016Q2
+2014Q1
+2011Q4
+2012Q2
+2016Q1
+2008Q4
+2009Q1
+2006Q4
+2007Q2
+2010Q4
+2015Q2
+2014Q3
+2014Q4
+2013Q2
+2004Q3
+2005Q2
+2010Q1
+2006Q3
+2011Q1
+2009Q3
+2009Q2
+
+model9:
+
+Epoch 1/10
+7500/7500 [==============================] - 558s 74ms/step - loss: 0.1858 - acc: 0.9281 - val_loss: 0.3036 - val_acc: 0.8879with 1 file(s) remainingng
+Epoch 2/10
+7500/7500 [==============================] - 866s 116ms/step - loss: 0.2622 - acc: 0.8952 - val_loss: 0.3286 - val_acc: 0.8926 with 1 file(s) remaining
+Epoch 3/10
+7500/7500 [==============================] - 1003s 134ms/step - loss: 0.1596 - acc: 0.9416 - val_loss: 0.2437 - val_acc: 0.9298th 1 file(s) remainingngg
+Epoch 4/10
+7500/7500 [==============================] - 1047s 140ms/step - loss: 0.1903 - acc: 0.9321 - val_loss: 0.1183 - val_acc: 0.9608with 1 file(s) remainingg
+Epoch 5/10
+7500/7500 [==============================] - 671s 89ms/step - loss: 0.1311 - acc: 0.9564 - val_loss: 0.2644 - val_acc: 0.9139) with 1 file(s) remaining
+Epoch 6/10
+7500/7500 [==============================] - 670s 89ms/step - loss: 0.1340 - acc: 0.9585 - val_loss: 0.1719 - val_acc: 0.9359ith 1 file(s) remainingging
+Epoch 7/10
+7500/7500 [==============================] - 998s 133ms/step - loss: 0.1674 - acc: 0.9419 - val_loss: 0.5273 - val_acc: 0.8350ith 1 file(s) remainingng
+Epoch 8/10
+7500/7500 [==============================] - 1030s 137ms/step - loss: 0.1951 - acc: 0.9248 - val_loss: 0.1488 - val_acc: 0.9575with 1 file(s) remainingg
+Epoch 9/10
+7500/7500 [==============================] - 735s 98ms/step - loss: 0.1619 - acc: 0.9336 - val_loss: 0.2583 - val_acc: 0.8956with 1 file(s) remainingngg
+Epoch 10/10
+7500/7500 [==============================] - 846s 113ms/step - loss: 0.1560 - acc: 0.9399 - val_loss: 0.1213 - val_acc: 0.9642 with 1 file(s) remainingg
+download: s3://loan-performance-data/numpy/2005Q4.npy.gz to ./2005Q4.npy.gz
+
+2000/2000 [==============================] - 336s 168ms/step - loss: 0.3106 - acc: 0.9019ted 256.0 KiB/205.9 MiB (1.1 MiB/s) with 1 file(s) remainingng
+2007Q4
+2016Q4
+2010Q3
+2008Q4
+2011Q2
+2011Q4
+2006Q4
+2013Q2
+2012Q1
+2008Q2
+2007Q2
+2012Q4
+2016Q2
+2009Q4
+2016Q3
+2005Q2
+2015Q2
+2012Q2
+2004Q4
+2011Q1
+2010Q4
+2012Q3
+2013Q4
+2015Q1
+2008Q1
+2014Q4
+2013Q1
+
+2005Q4
+2005Q3
+2008Q3
+
+model10:
+Train for 7500 steps, validate for 1000 steps
+Epoch 1/10
+7500/7500 [==============================] - 734s 98ms/step - loss: 0.2731 - acc: 0.8991 - val_loss: 0.4231 - val_acc: 0.8750with 1 file(s) remainingng
+Epoch 2/10
+7500/7500 [==============================] - 1001s 134ms/step - loss: 0.3102 - acc: 0.8714 - val_loss: 0.5260 - val_acc: 0.7543h 1 file(s) remaininging
+Epoch 3/10
+7500/7500 [==============================] - 1631s 217ms/step - loss: 0.1742 - acc: 0.9363 - val_loss: 0.4495 - val_acc: 0.8687
+Epoch 4/10
+7500/7500 [==============================] - 658s 88ms/step - loss: 0.2011 - acc: 0.9299 - val_loss: 0.3100 - val_acc: 0.8819) with 1 file(s) remainingg
+Epoch 5/10
+7500/7500 [==============================] - 580s 77ms/step - loss: 0.1767 - acc: 0.9329 - val_loss: 0.1088 - val_acc: 0.9657) with 1 file(s) remainingg
+Epoch 6/10
+7500/7500 [==============================] - 852s 114ms/step - loss: 0.1649 - acc: 0.9418 - val_loss: 0.1315 - val_acc: 0.9596 with 1 file(s) remaining
+Epoch 7/10
+7500/7500 [==============================] - 816s 109ms/step - loss: 0.1952 - acc: 0.9201 - val_loss: 0.2232 - val_acc: 0.9199 with 1 file(s) remainingg
+Epoch 8/10
+7500/7500 [==============================] - 1305s 174ms/step - loss: 0.2118 - acc: 0.9171 - val_loss: 0.5319 - val_acc: 0.7840ith 1 file(s) remaining
+Epoch 9/10
+7500/7500 [==============================] - 1290s 172ms/step - loss: 0.1570 - acc: 0.9457 - val_loss: 0.1657 - val_acc: 0.9503 1 file(s) remainingining
+Epoch 10/10
+7500/7500 [==============================] - 1334s 178ms/step - loss: 0.2065 - acc: 0.9254 - val_loss: 0.3857 - val_acc: 0.9110 with 1 file(s) remaining
+download: s3://loan-performance-data/numpy/2011Q3.npy.gz to ./2011Q3.npy.gz
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+2000/2000 [==============================] - 260s 130ms/step - loss: 0.5355 - acc: 0.8418ed 256.0 KiB/473.1 MiB (877.5 KiB/s) with 1 file(s) remainingng
+2001Q2
+2009Q4
+2000Q1
+2000Q4
+2011Q4
+2003Q3
+2016Q4
+2008Q1
+2014Q3
+2010Q2
+2016Q2
+2007Q2
+2014Q2
+2013Q2
+2007Q4
+2014Q1
+2013Q4
+2003Q1
+2005Q2
+2012Q3
+2003Q2
+2009Q3
+2011Q3
+2008Q3
+2010Q1
+2013Q3
+
+training on 2003 was very bad - cut out in future
+
+
+
+
+number of loans from 2004-2016 - 15335048
+2016 - 1710127
+2004-2015 - 13624921
+
+
+good_qtrs:
+2004Q4
+2010Q1
+2015Q1
+
+bad_qtrs:
+'2005Q4', '2000Q2','2002Q3','2004Q1','2008Q3','2009Q1','2009Q3'

@@ -1,0 +1,293 @@
+some training:
+  Train for 50000 steps, validate for 10000 steps
+  Epoch 1/10
+  50000/50000 [==============================] - 1743s 35ms/step - loss: 0.4720 - acc: 0.7978 - val_loss: 0.7066 - val_acc: 0.7286ith 1 file(s) remainingng
+  Epoch 2/10
+  download: s3://loan-performance-data/numpy2/2000Q4.npy.gz to ./2000Q4.npy.gz 0.7644Completed 256.0 KiB/270.0 MiB (976.9 KiB/s) with 1 file(s) remainingngg
+  50000/50000 [==============================] - 1746s 35ms/step - loss: 0.5312 - acc: 0.7644 - val_loss: 0.6806 - val_acc: 0.7110
+  Epoch 3/10
+  download: s3://loan-performance-data/numpy2/2000Q2.npy.gz to ./2000Q2.npy.gz 0.7707Completed 256.0 KiB/214.5 MiB (941.1 KiB/s) with 1 file(s) remainingngg
+  50000/50000 [==============================] - 1788s 36ms/step - loss: 0.5345 - acc: 0.7707 - val_loss: 0.6515 - val_acc: 0.7246
+  Epoch 4/10
+  download: s3://loan-performance-data/numpy2/2000Q4.npy.gz to ./2000Q4.npy.gz 0.7516Completed 256.0 KiB/270.0 MiB (948.3 KiB/s) with 1 file(s) remainingning
+  50000/50000 [==============================] - 1754s 35ms/step - loss: 0.5606 - acc: 0.7516 - val_loss: 0.7232 - val_acc: 0.7033
+  Epoch 5/10
+  download: s3://loan-performance-data/numpy2/2000Q2.npy.gz to ./2000Q2.npy.gz 0.7661Completed 256.0 KiB/214.5 MiB (976.2 KiB/s) with 1 file(s) remainingngg
+  50000/50000 [==============================] - 1791s 36ms/step - loss: 0.5432 - acc: 0.7661 - val_loss: 0.6722 - val_acc: 0.7026
+  Epoch 6/10
+  download: s3://loan-performance-data/numpy2/2000Q4.npy.gz to ./2000Q4.npy.gz 0.7486Completed 256.0 KiB/270.0 MiB (852.4 KiB/s) with 1 file(s) remainingngng
+  50000/50000 [==============================] - 1753s 35ms/step - loss: 0.5675 - acc: 0.7486 - val_loss: 0.6534 - val_acc: 0.7250
+  Epoch 7/10
+  download: s3://loan-performance-data/numpy2/2000Q2.npy.gz to ./2000Q2.npy.gz 0.7676Completed 256.0 KiB/214.5 MiB (881.3 KiB/s) with 1 file(s) remainingng
+  50000/50000 [==============================] - 1770s 35ms/step - loss: 0.5426 - acc: 0.7676 - val_loss: 0.6778 - val_acc: 0.6876
+  Epoch 8/10
+  download: s3://loan-performance-data/numpy2/2000Q4.npy.gz to ./2000Q4.npy.gz 0.7512Completed 256.0 KiB/270.0 MiB (887.6 KiB/s) with 1 file(s) remainingng
+  50000/50000 [==============================] - 1790s 36ms/step - loss: 0.5652 - acc: 0.7512 - val_loss: 0.6187 - val_acc: 0.7427
+  Epoch 9/10
+  download: s3://loan-performance-data/numpy2/2000Q2.npy.gz to ./2000Q2.npy.gz 0.7535Completed 256.0 KiB/214.5 MiB (868.3 KiB/s) with 1 file(s) remainingngg
+  50000/50000 [==============================] - 1781s 36ms/step - loss: 0.5609 - acc: 0.7535 - val_loss: 0.6392 - val_acc: 0.7012
+  Epoch 10/10
+  50000/50000 [==============================] - 1794s 36ms/step - loss: 0.5610 - acc: 0.7576 - val_loss: 0.6247 - val_acc: 0.7410h 1 file(s) remainingningng
+  download: s3://loan-performance-data/numpy2/2001Q1.npy.gz to ./2001Q1.npy.gz
+  WARNING:tensorflow:sample_weight modes were coerced from
+    ...
+      to
+    ['...']
+  25000/25000 [==============================] - 185s 7ms/step - loss: 0.6707 - acc: 0.7063
+
+  Train for 5000 steps, validate for 1000 steps
+  Epoch 1/10
+  5000/5000 [==============================] - 2966s 593ms/step - loss: 0.5779 - acc: 0.7395 - val_loss: 0.5680 - val_acc: 0.7429
+  Epoch 2/10
+  5000/5000 [==============================] - 2907s 581ms/step - loss: 0.5720 - acc: 0.7369 - val_loss: 0.5661 - val_acc: 0.7386
+  Epoch 3/10
+  5000/5000 [==============================] - 2832s 566ms/step - loss: 0.5653 - acc: 0.7419 - val_loss: 0.5665 - val_acc: 0.7375
+  Epoch 4/10
+  5000/5000 [==============================] - 2821s 564ms/step - loss: 0.5691 - acc: 0.7395 - val_loss: 0.5644 - val_acc: 0.7412
+  Epoch 5/10
+  5000/5000 [==============================] - 2870s 574ms/step - loss: 0.5682 - acc: 0.7367 - val_loss: 0.5608 - val_acc: 0.7442
+  Epoch 6/10
+  5000/5000 [==============================] - 2987s 597ms/step - loss: 0.5630 - acc: 0.7458 - val_loss: 0.5650 - val_acc: 0.7416
+  Epoch 7/10
+  5000/5000 [==============================] - 2870s 574ms/step - loss: 0.5691 - acc: 0.7358 - val_loss: 0.5681 - val_acc: 0.7349
+  Epoch 8/10
+  5000/5000 [==============================] - 2965s 593ms/step - loss: 0.5618 - acc: 0.7453 - val_loss: 0.5604 - val_acc: 0.7488
+  Epoch 9/10
+  5000/5000 [==============================] - 2905s 581ms/step - loss: 0.5677 - acc: 0.7388 - val_loss: 0.5634 - val_acc: 0.7415
+  Epoch 10/10
+  5000/5000 [==============================] - 2987s 597ms/step - loss: 0.5615 - acc: 0.7436 - val_loss: 0.5642 - val_acc: 0.7426
+  2500/2500 [==============================] - 994s 398ms/step - loss: 0.6064 - acc: 0.6924
+
+  5:
+  Train for 5000 steps, validate for 1000 steps
+  Epoch 1/10
+  5000/5000 [==============================] - 3122s 624ms/step - loss: 0.5776 - acc: 0.7404 - val_loss: 0.5654 - val_acc: 0.7448
+  Epoch 2/10
+  5000/5000 [==============================] - 3033s 607ms/step - loss: 0.5738 - acc: 0.7361 - val_loss: 0.5663 - val_acc: 0.7357
+  Epoch 3/10
+  5000/5000 [==============================] - 2949s 590ms/step - loss: 0.5660 - acc: 0.7414 - val_loss: 0.5674 - val_acc: 0.7380
+  Epoch 4/10
+  5000/5000 [==============================] - 2993s 599ms/step - loss: 0.5699 - acc: 0.7394 - val_loss: 0.5643 - val_acc: 0.7422
+  Epoch 5/10
+  5000/5000 [==============================] - 2967s 593ms/step - loss: 0.5683 - acc: 0.7366 - val_loss: 0.5636 - val_acc: 0.7431
+  Epoch 6/10
+  5000/5000 [==============================] - 3085s 617ms/step - loss: 0.5629 - acc: 0.7454 - val_loss: 0.5650 - val_acc: 0.7415
+  Epoch 7/10
+  5000/5000 [==============================] - 3001s 600ms/step - loss: 0.5701 - acc: 0.7351 - val_loss: 0.5666 - val_acc: 0.7354
+  Epoch 8/10
+  5000/5000 [==============================] - 3022s 604ms/step - loss: 0.5623 - acc: 0.7452 - val_loss: 0.5633 - val_acc: 0.7442
+  Epoch 9/10
+  5000/5000 [==============================] - 2994s 599ms/step - loss: 0.5684 - acc: 0.7383 - val_loss: 0.5652 - val_acc: 0.7407
+  Epoch 10/10
+  5000/5000 [==============================] - 3048s 610ms/step - loss: 0.5626 - acc: 0.7430 - val_loss: 0.5591 - val_acc: 0.7432
+  WARNING:tensorflow:sample_weight modes were coerced from
+
+  Epoch 1/10[=>............................] - ETA: 9:29 - loss: 0.5879 - acc: 0.738 ^[[B
+  5000/5000 [==============================] - 3122s 624ms/step - loss: 0.5776 - acc: 0.7404 - val_loss: 0.5654 - val_acc: 0.7448
+  Epoch 2/10
+  5000/5000 [==============================] - 3033s 607ms/step - loss: 0.5738 - acc: 0.7361 - val_loss: 0.5663 - val_acc: 0.7357
+  Epoch 3/10
+  5000/5000 [==============================] - 2949s 590ms/step - loss: 0.5660 - acc: 0.7414 - val_loss: 0.5674 - val_acc: 0.7380
+  Epoch 4/10
+  5000/5000 [==============================] - 2993s 599ms/step - loss: 0.5699 - acc: 0.7394 - val_loss: 0.5643 - val_acc: 0.7422
+  Epoch 5/10
+  5000/5000 [==============================] - 2967s 593ms/step - loss: 0.5683 - acc: 0.7366 - val_loss: 0.5636 - val_acc: 0.7431
+  Epoch 6/10
+  5000/5000 [==============================] - 3085s 617ms/step - loss: 0.5629 - acc: 0.7454 - val_loss: 0.5650 - val_acc: 0.7415
+  Epoch 7/10
+  5000/5000 [==============================] - 3001s 600ms/step - loss: 0.5701 - acc: 0.7351 - val_loss: 0.5666 - val_acc: 0.7354
+  Epoch 8/10
+  5000/5000 [==============================] - 3022s 604ms/step - loss: 0.5623 - acc: 0.7452 - val_loss: 0.5633 - val_acc: 0.7442
+  Epoch 9/10
+  5000/5000 [==============================] - 2994s 599ms/step - loss: 0.5684 - acc: 0.7383 - val_loss: 0.5652 - val_acc: 0.7407
+  Epoch 10/10
+  5000/5000 [==============================] - 3048s 610ms/step - loss: 0.5626 - acc: 0.7430 - val_loss: 0.5591 - val_acc: 0.7432
+  5000/5000 [==============================] - 747s 149ms/step - loss: 0.5503 - acc: 0.7661 - val_loss: 0.5822 - val_acc: 0.7204
+  Epoch 7/10
+  5000/5000 [==============================] - 760s 152ms/step - loss: 0.5629 - acc: 0.7413 - val_loss: 0.5585 - val_acc: 0.7640
+  Epoch 8/10
+  5000/5000 [==============================] - 770s 154ms/step - loss: 0.5813 - acc: 0.7319 - val_loss: 0.5704 - val_acc: 0.7365
+  Epoch 9/10
+  5000/5000 [==============================] - 794s 159ms/step - loss: 0.5604 - acc: 0.7478 - val_loss: 0.5758 - val_acc: 0.7285
+  Epoch 10/10
+  5000/5000 [==============================] - 789s 158ms/step - loss: 0.5799 - acc: 0.7224 - val_loss: 0.5656 - val_acc: 0.7549
+testing (loss, acc), (dropout, neurons, batch_size, layer_count = 1):
+  model1: 0.6055, 69.01 (0.08,15,32)
+  model2: 0.6035, 69.34 (0.15,15,32)
+  model3: 0.6089, 68.87 (0.20,15,32)
+  model4: 0.6069, 69.05 (0.40,15,32)
+  *********************
+  model5: 0.6019, 69.29 (0.08,20,32)
+  model6: 0.6020, 69.34 (0.15,20,32)
+  model7: 0.6046, 69.10 (0.20,20,32)
+  model8: 0.6059, 69.10 (0.40,20,32)
+  model9: 0.6157, 68.61 (0.08,32,32)
+  model10: 0.6021, 69.29 (0.15,32,32)
+  model11: 0.6053, 68.64 (0.2,32,32)
+  model12: 0.6072, 69.20 (0.4,32,32)
+  model13: 0.6169, 68.67 (0.08,48,32)
+  model14: 0.6036, 69.12 (0.15,48,32)
+  model15: 0.6040, 69.27 (0.20,48,32)
+  model16: 0.6051, 68.86 (0.40,48,32)
+  model17: 0.6115, 68.87 (0.08,20,64)
+  model18: 0.6003, 69.93 (0.15,20,64)
+  model19: 0.6011, 69.30 (0.20,20,64)
+  model20: 0.6034, 69.11 (0.40,20,64)
+  model21: 0.6086, 69.05 (0.08,32,64)
+  model22: 0.6003, 69.32 (0.15,32,64)
+  model23: 0.5993, 69.29 (0.20,32,64)
+  model24: 0.6004, 69.16 (0.40,32,64)
+  model25: 0.6075, 69.06 (0.08,48,64)
+  model26: 0.6015, 69.38 (0.15,48,64)
+  model27: 0.6013, 69.44 (0.20,48,64)
+  model28: 0.6029, 69.07 (0.40,48,64)
+  model29: 0.6128, 68.97 (0.08,20,128)
+  model30: 0.6068, 69.21 (0.15,20,128)
+  model31: 0.6027, 68.98 (0.2,20,128)
+  model32: 0.6063, 68.82 (0.4,20,128)
+  model33: 0.6171, 68.47 (0.08,32,128)
+  model34: 0.6049, 69.12 (0.15,32,128)
+  model35: 0.6054, 68.91 (0.2,32,128)
+  model36: 0.6049, 69.06 (0.4,32,128)
+  model37: 0.6149, 68.39 (0.08,48,128)
+  model38: 0.5973, 69.31 (0.15,48,128)
+  model39: 0.5984, 69.46 (0.2,48,128)
+
+  observations:
+    dropout = 0.15 seems best
+    dropout = 0.08 is too little --> overfitting
+    dropout = 0.40 is too much --> underfitting
+    batch_size = 64 seems best
+    neurons = 20 seems best
+    neurons > 20 --> overfitting
+model2 :
+  Train for 2500 steps, validate for 500 steps
+  Epoch 1/10
+  2500/2500 [==============================] - 922s 369ms/step - loss: 0.6700 - acc: 0.7242 - val_loss: 0.5765 - val_acc: 0.7548
+  Epoch 2/10
+  2500/2500 [==============================] - 855s 342ms/step - loss: 0.6045 - acc: 0.7172 - val_loss: 0.5752 - val_acc: 0.7296
+  Epoch 3/10
+  2500/2500 [==============================] - 889s 356ms/step - loss: 0.5983 - acc: 0.7249 - val_loss: 0.6005 - val_acc: 0.6997
+  Epoch 4/10
+  2500/2500 [==============================] - 877s 351ms/step - loss: 0.5819 - acc: 0.7340 - val_loss: 0.5565 - val_acc: 0.7595
+  Epoch 5/10
+  2500/2500 [==============================] - 872s 349ms/step - loss: 0.5955 - acc: 0.7133 - val_loss: 0.5696 - val_acc: 0.7380
+  Epoch 6/10
+  2500/2500 [==============================] - 904s 361ms/step - loss: 0.5644 - acc: 0.7590 - val_loss: 0.5895 - val_acc: 0.7127
+  Epoch 7/10
+  2500/2500 [==============================] - 860s 344ms/step - loss: 0.5765 - acc: 0.7333 - val_loss: 0.5649 - val_acc: 0.7589
+  Epoch 8/10
+  2500/2500 [==============================] - 872s 349ms/step - loss: 0.5937 - acc: 0.7224 - val_loss: 0.5666 - val_acc: 0.7366
+  Epoch 9/10
+  2500/2500 [==============================] - 860s 344ms/step - loss: 0.5680 - acc: 0.7437 - val_loss: 0.5862 - val_acc: 0.7210
+  Epoch 10/10
+  2500/2500 [==============================] - 861s 344ms/step - loss: 0.5839 - acc: 0.7204 - val_loss: 0.5544 - val_acc: 0.7628
+  WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+  WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+  Train for 2500 steps, validate for 500 steps
+  Epoch 1/10
+  2500/2500 [==============================] - 880s 352ms/step - loss: 0.6709 - acc: 0.7177 - val_loss: 0.5795 - val_acc: 0.7484
+  Epoch 2/10
+  2500/2500 [==============================] - 843s 337ms/step - loss: 0.6128 - acc: 0.7126 - val_loss: 0.5812 - val_acc: 0.7234
+  Epoch 3/10
+  2500/2500 [==============================] - 856s 342ms/step - loss: 0.6023 - acc: 0.7222 - val_loss: 0.6087 - val_acc: 0.6934
+  Epoch 4/10
+  2500/2500 [==============================] - 854s 342ms/step - loss: 0.5898 - acc: 0.7315 - val_loss: 0.5607 - val_acc: 0.7592
+  Epoch 5/10
+  2500/2500 [==============================] - 864s 346ms/step - loss: 0.6018 - acc: 0.7087 - val_loss: 0.5744 - val_acc: 0.7304
+  Epoch 6/10
+  2500/2500 [==============================] - 856s 342ms/step - loss: 0.5719 - acc: 0.7563 - val_loss: 0.6039 - val_acc: 0.6971
+  Epoch 7/10
+  2500/2500 [==============================] - 847s 339ms/step - loss: 0.5795 - acc: 0.7311 - val_loss: 0.5708 - val_acc: 0.7598
+  Epoch 8/10
+  2500/2500 [==============================] - 837s 335ms/step - loss: 0.5985 - acc: 0.7202 - val_loss: 0.5774 - val_acc: 0.7325
+  Epoch 9/10
+  2500/2500 [==============================] - 867s 347ms/step - loss: 0.5731 - acc: 0.7422 - val_loss: 0.5895 - val_acc: 0.7142
+  Epoch 10/10
+  2500/2500 [==============================] - 842s 337ms/step - loss: 0.5858 - acc: 0.7213 - val_loss: 0.5686 - val_acc: 0.7533
+  WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+  WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+  Train for 2500 steps, validate for 500 steps
+  Epoch 1/10
+  2500/2500 [==============================] - 879s 352ms/step - loss: 0.6949 - acc: 0.7121 - val_loss: 0.5993 - val_acc: 0.7460
+  Epoch 2/10
+  2500/2500 [==============================] - 859s 343ms/step - loss: 0.6272 - acc: 0.7100 - val_loss: 0.5896 - val_acc: 0.7244
+  Epoch 3/10
+  2500/2500 [==============================] - 865s 346ms/step - loss: 0.6124 - acc: 0.7192 - val_loss: 0.6247 - val_acc: 0.6837
+  Epoch 4/10
+  2500/2500 [==============================] - 865s 346ms/step - loss: 0.5998 - acc: 0.7265 - val_loss: 0.5638 - val_acc: 0.7604
+  Epoch 5/10
+  2500/2500 [==============================] - 875s 350ms/step - loss: 0.6076 - acc: 0.7048 - val_loss: 0.5849 - val_acc: 0.7227
+  Epoch 6/10
+  2500/2500 [==============================] - 874s 349ms/step - loss: 0.5768 - acc: 0.7556 - val_loss: 0.6048 - val_acc: 0.6952
+  Epoch 7/10
+  2500/2500 [==============================] - 870s 348ms/step - loss: 0.5880 - acc: 0.7271 - val_loss: 0.5702 - val_acc: 0.7614
+  Epoch 8/10
+  2500/2500 [==============================] - 858s 343ms/step - loss: 0.6032 - acc: 0.7167 - val_loss: 0.5863 - val_acc: 0.7220
+  Epoch 9/10
+  2500/2500 [==============================] - 854s 342ms/step - loss: 0.5791 - acc: 0.7407 - val_loss: 0.5882 - val_acc: 0.7167
+  Epoch 10/10
+  2500/2500 [==============================] - 836s 334ms/step - loss: 0.5899 - acc: 0.7178 - val_loss: 0.5722 - val_acc: 0.7512
+
+  5000/5000 [==============================] - 1065s 213ms/step - loss: 0.6016 - acc: 0.6932
+download: s3://loan-performance-data/saved_models/rolling_models3/model4.h5 to ./model4.h5
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+5000/5000 [==============================] - 821s 164ms/step - loss: 0.6018 - acc: 0.6929
+download: s3://loan-performance-data/saved_models/rolling_models3/model5.h5 to ./model5.h5
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+5000/5000 [==============================] - 1064s 213ms/step - loss: 0.6039 - acc: 0.6933
+download: s3://loan-performance-data/saved_models/rolling_models3/model6.h5 to ./model6.h5
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+5000/5000 [==============================] - 825s 165ms/step - loss: 0.6051 - acc: 0.6920
+download: s3://loan-performance-data/saved_models/rolling_models3/model7.h5 to ./model7.h5
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+5000/5000 [==============================] - 824s 165ms/step - loss: 0.6026 - acc: 0.6912
+5000/5000 [==============================] - 1007s 201ms/step - loss: 0.6128 - acc: 0.6877
+download: s3://loan-performance-data/saved_models/rolling_models3/model9.h5 to ./model9.h5
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+5000/5000 [==============================] - 745s 149ms/step - loss: 0.6047 - acc: 0.6886
+download: s3://loan-performance-data/saved_models/rolling_models3/model10.h5 to ./model10.h5
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+5000/5000 [==============================] - 749s 150ms/step - loss: 0.6078 - acc: 0.6887
+download: s3://loan-performance-data/saved_models/rolling_models3/model11.h5 to ./model11.h5
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+5000/5000 [==============================] - 779s 156ms/step - loss: 0.6308 - acc: 0.6651
+download: s3://loan-performance-data/saved_models/rolling_models3/model12.h5 to ./model12.h5
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to
+  ['...']
+5000/5000 [==============================] - 974s 195ms/step - loss: 0.7591 - acc: 0.6321

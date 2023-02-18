@@ -1,0 +1,11 @@
+Generator psuedo-code:
+  Read next input as .npy array (should be normalized already)
+  Create samples array shape (batch_size, steps, 8)
+  Loop through raw-data samples:
+    Move to next sample
+    Search for first non -1 row in the sample -- (start from there + lookback)
+    While True:
+      Look back through the datapoints (skipping every steps rows) and put it in samples array
+      Record prepayment in targets if column index 2 zeros out
+      Advance input one step if no prepayment else break
+      yield if at batch_size
